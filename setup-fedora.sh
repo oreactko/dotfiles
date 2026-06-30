@@ -42,7 +42,7 @@ fi
 # Setup zsh and oh-my-posh
 mkdir -p ~/.local/share # Ensure the directory exists for zi and more
 sudo chsh -s /usr/bin/zsh "${SUDO_USER:-$USER}"
-sh -c "$(curl -fsSL get.zshell.dev)" --
+bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
 git clone https://github.com/LazyVim/starter ~/.config/nvim
 rm -rf ~/.config/nvim/.git
 wget https://raw.githubusercontent.com/oreactko/linux-setup/refs/heads/main/nvim/lazyvim.json -O ~/.config/nvim/lazyvim.json
